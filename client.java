@@ -1,4 +1,4 @@
-// File Name GreetingClient.java
+// client.java
 
 import java.net.*;
 import java.io.*;
