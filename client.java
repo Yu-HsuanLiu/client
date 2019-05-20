@@ -1,5 +1,4 @@
 // client.java
-package script;
 import java.net.*;
 import java.io.*;
 
