@@ -1,5 +1,5 @@
 // client.java
-package .script
+package script
 import java.net.*;
 import java.io.*;
 
