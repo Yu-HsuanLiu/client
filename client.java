@@ -16,8 +16,8 @@ public class client
          OutputStream outToServer = client.getOutputStream();
          DataOutputStream out =
                        new DataOutputStream(outToServer);
-
-         out.writeUTF("Hello from " + client.getLocalSocketAddress());
+         UserDomain = java.net.InetAddress.getLocalHost();
+         out.writeUTF("Hello from " + UserDomain.getHostName());
          InputStream inFromServer = client.getInputStream();
          DataInputStream in =
                         new DataInputStream(inFromServer);
