@@ -14,7 +14,7 @@ public class client {
             DataOutputStream out =
                     new DataOutputStream(outToServer);
             InetAddress addr = InetAddress.getLocalHost();
-            out.writeUTF("Hello from " + addr.getHostName() + " " + "ip :" + addr.getHostAddress());
+            out.writeUTF("Hello from " + addr.getHostName() + " " + "ip address :" + addr.getHostAddress());
             InputStream inFromServer = client.getInputStream();
             DataInputStream in =
                     new DataInputStream(inFromServer);
