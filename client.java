@@ -15,10 +15,10 @@ public class client {
                     new DataOutputStream(outToServer);
             InetAddress addr = InetAddress.getLocalHost();
             if (addr.getHostName().equals("node1") || addr.getHostName().equals("node2") || addr.getHostName().equals("node3")) {
-                out.writeUTF("Hello from " + addr.getHostName() + " " + "ip :" + addr.getHostAddress());
+                out.writeUTF("~~~~~~~~~Hello from " + addr.getHostName() + " " + "ip :" + addr.getHostAddress()+"~~~~~~~~~~~");
             }
             else {
-                out.writeUTF("I'm" + addr.getHostName() +"not the host you looking for!");
+                out.writeUTF("I'm " + addr.getHostName() +" not the host you looking for!");
             }
                 InputStream inFromServer = client.getInputStream();
                 DataInputStream in =
