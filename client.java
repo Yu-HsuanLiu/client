@@ -20,7 +20,7 @@ public class client {
             else {
                 out.writeUTF("I'm " + addr.getHostName() +" not the host you looking for!");
             }*/
-            out.writeUTF("3," + addr.getHostName()+",500,500");
+            out.writeUTF(args[2]+ "," + addr.getHostName()+",500,500");
             InputStream inFromServer = client.getInputStream();
             DataInputStream in =
                     new DataInputStream(inFromServer);
