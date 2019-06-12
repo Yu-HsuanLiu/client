@@ -14,17 +14,18 @@ public class client {
             DataOutputStream out =
                     new DataOutputStream(outToServer);
             InetAddress addr = InetAddress.getLocalHost();
-            if (addr.getHostName().equals("node1") || addr.getHostName().equals("node2") || addr.getHostName().equals("node3")) {
+            /*if (addr.getHostName().equals("node1") || addr.getHostName().equals("node2") || addr.getHostName().equals("node3")) {
                 out.writeUTF("~~~~~~~~~Hello from " + addr.getHostName() + " " + "ip :" + addr.getHostAddress()+"~~~~~~~~~~~");
             }
             else {
                 out.writeUTF("I'm " + addr.getHostName() +" not the host you looking for!");
-            }
-                InputStream inFromServer = client.getInputStream();
-                DataInputStream in =
-                        new DataInputStream(inFromServer);
-                System.out.println("Server says " + in.readUTF());
-                client.close();
+            }*/
+            out.writeUTF("3," + addr.getHostName()+",500,500");
+            InputStream inFromServer = client.getInputStream();
+            DataInputStream in =
+                    new DataInputStream(inFromServer);
+            System.out.println("Server says " + in.readUTF());
+            client.close();
         }catch(IOException e)
         {
             e.printStackTrace();
